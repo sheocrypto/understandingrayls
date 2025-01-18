@@ -1,0 +1,24 @@
+environments:
+  development:
+    api_base_url: "https://api.dev.rayls.com"
+    sdk_endpoint: "wss://sdk.dev.rayls.com"
+    cli_config:
+      network: "testnet"
+      chain_id: 1337
+    
+  staging:
+    api_base_url: "https://api.staging.rayls.com"
+    sdk_endpoint: "wss://sdk.staging.rayls.com"
+    cli_config:
+      network: "testnet"
+      chain_id: 1337
+
+test_data:
+  token:
+    name: "TestToken"
+    symbol: "TST"
+    decimals: 18
+  
+  accounts:
+    test_wallet: "0x1234567890abcdef1234567890abcdef12345678"
+    test_contract: "0xabcdef1234567890abcdef1234567890abcdef12"
