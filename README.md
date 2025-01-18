@@ -1,9 +1,7 @@
 # Understanding Rayls
-
 This project is build to develop a better understanding of Rayls ecosystem using the Rayls documentation here - https://docs.rayls.com/docs/a-warm-introduction-to-rayls and draft a tentative testing strategy with a test automation framework for the Rayls system.
 
 ## Understanding Rayls as a Product
-
 Rayls positions itself as a bridge between Traditional Finance (TradFi) and Decentralized Finance (DeFi), introducing the concept of UniFi.
 
 ### 1. Value Proposition
@@ -42,9 +40,7 @@ Rayls positions itself as a bridge between Traditional Finance (TradFi) and Dece
 - Institutional-grade custody solutions
 - Interoperability with major DeFi protocols cross-chains
 
-
 ## Understanding Rayls Technical Set-Up
-
 Rayls is a blockchain system built on EVM (Ethereum Virtual Machine) technology, consisting of several key technical components:
 
 ### 1. Architecture Components
@@ -77,13 +73,10 @@ Rayls is a blockchain system built on EVM (Ethereum Virtual Machine) technology,
 - Enterprise-grade security measures
 - Regulatory compliance management using Governance and Auditor contracts
 
-
 ## Test Strategy
-
 Based on understanding of Rayls from a product and technical components perspective from above, I would design a Test Strategy covering all major components as below:
 
 ### 1. Private Subnet and Privacy Ledger Testing
-
 #### Enterprise Privacy & Encryption
 - **Transaction Privacy**
   - Verify end-to-end encryption of transactions
@@ -101,7 +94,7 @@ Based on understanding of Rayls from a product and technical components perspect
 
 #### Scalability & Performance
 - **Transaction Processing**
-  - Verify 10,000+ TPS capability
+  - Verify 10,000+ Transactions Per Second capability
   - Test under varying load conditions
   
 - **Database Integration**
@@ -116,7 +109,6 @@ Based on understanding of Rayls from a product and technical components perspect
 #### Compliance & Governance
 - **Smart Contract Rules**
   - Test token freezing mechanisms
-  - Verify seizure functionalities
   - Validate governance workflows
 
 ### 2. Rayls Custody Testing
@@ -149,7 +141,6 @@ Based on understanding of Rayls from a product and technical components perspect
   
 - **Regulatory Compliance**
   - Test AML monitoring
-  - Verify reporting mechanisms
   - Validate compliance rules
 
 #### DeFi Integration
@@ -166,9 +157,7 @@ Based on understanding of Rayls from a product and technical components perspect
   - Test cross-chain token movement
   - Validate asset reconciliation
 
-
 ## Testing Frameworks and Tools
-
 Based on the test cases and requirements outlined above, the following frameworks and tools are recommended for test automation:
 
 ### 1. API Testing Tools
@@ -180,13 +169,6 @@ Based on the test cases and requirements outlined above, the following framework
   - Python-based automated API testing for schema, request-response validations
   - Easily integrated with CICD (Github Actions)
 
-#### Performance Testing
-- **K6**
-  - Load testing
-  - Performance monitoring
-  - Distributed testing
-  - Cloud execution support  
-
 ### 2. SDK/CLI Testing Tools
 #### Unit and Integration Testing
 - **PyTest**
@@ -196,7 +178,14 @@ Based on the test cases and requirements outlined above, the following framework
   - Network simulation
   - Cross-chain testing
 
-### 3. Blockchain-Specific Tools 
+### 3. Performance Testing Tools
+- **K6/Locust**
+  - Load testing
+  - Performance monitoring
+  - Distributed testing
+  - Cloud execution support  
+
+### 4. Blockchain-Specific Tools 
 - **Hardhat**
   - Ethereum development
   - Test automation
@@ -223,11 +212,9 @@ Based on the test cases and requirements outlined above, the following framework
   - Test planning
 
 ## High-Level Automation Framework Design
-
 The following automation framework design provides a scalable and maintainable approach to testing Rayls components:
 
 ### 1. Framework Architecture
-
 ```
 rayls-test-automation/
 ├── core/
@@ -241,7 +228,7 @@ rayls-test-automation/
 │   └── reporting/               # Test reporting
 │       ├── allure_reporter.py
 │       └── custom_reports.py
-├── private_subnet_privacy_ledger/ # Privacy Ledger Component Tests
+├── pvt_subnet_pvt_ledger/       # Private Subnets and PL Component Tests
 │   ├── transaction_privacy/     # Privacy-focused tests
 │   │   ├── encryption_tests/    # E2E encryption validation
 │   │   └── access_control/      # Access management tests
@@ -295,21 +282,4 @@ rayls-test-automation/
 - Performance metrics
 - Coverage analysis
 - Failure analysis
-
-### 3. Component-Specific Frameworks
-#### API Testing Framework
-- Request builders
-- Response validators
-- Authentication handlers
-- Rate limit management
-
-#### SDK and CLI Testing Framework
-- Mock system
-- Fixture management
-- Cross-chain simulators
-- Event handlers
-- Command executors
-- Output parsers
-- Environment managers
-- State validators
 
