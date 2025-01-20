@@ -20,20 +20,7 @@ Rayls positions itself as a bridge between Traditional Finance (TradFi) and Dece
   - Decentralized exchanges
   - Asset tokenization services
 
-### 3. Key Benefits
-- **For TradFi**:
-  - Access to DeFi innovation
-  - Maintained privacy and security
-  - Regulatory compliance
-  - Enterprise-grade scalability
-
-- **For DeFi**:
-  - Access to traditional financial infrastructure
-  - Increased liquidity
-  - Broader user base
-  - Enhanced security features
-
-### 4. Product Features
+### 3. Product Features
 - Infrastructure for Token issuance and management
 - Cross-chain asset transfers
 - Private transaction processing
@@ -73,28 +60,40 @@ Rayls is a blockchain system built on EVM (Ethereum Virtual Machine) technology,
 - Enterprise-grade security measures
 - Regulatory compliance management using Governance and Auditor contracts
 
+## Product Key Benefits and how they can be achieved using various Tech Components
+- **For TradFi**:
+  - Access to DeFi innovation : ( Public Chain Component of Rayls enables access to DEFI ) 
+  - Maintained privacy and security : ( Privacy Ledgers with encryption/decrytion feature using secure algorithms like ZK Proofs helps achieve privacy and security )
+  - Regulatory compliance : ( Governance module in Privacy Ledger allows tradfi systems to define and implement their rules )
+  - Enterprise-grade scalability : ( Privacy Ledgers are designed to handle more than 10000 TPS throughput making the infrastructure highly scalable )
+
+- **For DeFi**:
+  - Access to traditional financial infrastructure : ( Public Chain allows DEFI systems to talk to Private Subnets which has access to TradFi infrastructure )
+  - Broader user base and Increased liquidity : ( With increased privacy, larger institutions can bring more money and users to DEFI systems using Rayls private subnets and public blockchain to access )
+  - Enhanced security features : ( Even public blockchain requires every account created on it to be KYCd hence increasing security )
+
 ## Test Strategy
 Based on understanding of Rayls from a product and technical components perspective from above, I would design a Test Strategy covering all major components as below:
 
 ### 1. Private Subnet and Privacy Ledger Testing
-#### Enterprise Privacy & Encryption
+#### Privacy & Encryption Testing
 - **Transaction Privacy**
   - Verify end-to-end encryption of transactions
   - Test private token issuance workflows
   - Validate encrypted messaging between ledgers
 
-- **Access Control**
+- **Access Control Testing**
   - Test account isolation mechanisms
   - Validate auditor access controls
 
-- **Institutional Integration**
-  - Test multi-institution setup
+- **Institutional Integration Testing**
+  - Test multi-institution setup in Private Subnets
   - Verify private messaging between multi-institution subnets
   - Validate business workflows
 
-#### Scalability & Performance
+#### Scalability & Performance Testing
 - **Transaction Processing**
-  - Verify 10,000+ Transactions Per Second capability
+  - Verify 10,000+ Transactions Per Second capability in Privacy Ledgers
   - Test under varying load conditions
   
 - **Database Integration**
@@ -108,49 +107,43 @@ Based on understanding of Rayls from a product and technical components perspect
 
 #### Compliance & Governance
 - **Smart Contract Rules**
-  - Test token freezing mechanisms
-  - Validate governance workflows
+  - Test token freezing mechanisms using governance module/engine
+  - Validate any custom governance workflows
 
 ### 2. Rayls Custody Testing
-#### Security Infrastructure
-- **HSM Integration**
+#### Security Infrastructure Testing
+- **HSM Integration Testing**
   - Verify key generation and storage
   - Test key derivation (BIP32)
   - Validate backup procedures
   
-- **Access Management**
+- **Access Management Testing**
   - Test multi-signature workflows
   - Validate key rotation procedures
 
-#### Scalability & Management
-- **Account Management**
+#### Scalability & Management Testing
+- **Account Management Testing**
   - Test large-scale account creation
   - Verify batch operations
     
-- **API Integration**
+- **API Integration Testing**
   - Test cross-chain operations
   - Verify transaction monitoring
   - Validate balance reconciliation
 
 ### 3. Public Chain Testing
-#### Compliance & KYC
+#### Compliance & KYC Testing
 - **Account Verification**
   - Test KYC validation workflows
   - Verify account restrictions
   - Validate identity management
-  
-- **Regulatory Compliance**
-  - Test AML monitoring
-  - Validate compliance rules
 
-#### DeFi Integration
-- **Protocol Integration**
+#### DeFi Integration Testing
+- **Protocol Integration and Cross-Chain Testing**
   - Test DeFi protocol connectivity
   - Verify smart contract interactions
   - Validate liquidity management
   - Validate token standard compatibility
-  
-- **Cross-Chain Operations**
   - Test public chain transactions
   - Verify token bridging
   - Validate protocol interoperability
@@ -212,7 +205,7 @@ Based on the test cases and requirements outlined above, the following framework
   - Test planning
 
 ## High-Level Automation Framework Design
-The following automation framework design provides a scalable and maintainable approach to testing Rayls components:
+The following automation framework design defines a scalable and maintainable approach to testing various Rayls components:
 
 ### 1. Framework Architecture
 ```
